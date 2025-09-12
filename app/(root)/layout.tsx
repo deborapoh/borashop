@@ -9,9 +9,7 @@ export default function RootLayout({
   // wrapper -> from globals.css
   return (
     <div className="flex h-screen flex-col">
-      <main className="flex-1 wrapper">
-        {children}
-      </main>
+      <main className="flex-1 wrapper">{children}</main>
     </div>
   );
 }
