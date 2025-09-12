@@ -4,7 +4,8 @@
     "editor.codeActionsOnSave": {
         "source.fixAll.eslint": "explicit"
     },
-    "prettier.requireConfig": true,
+    "prettier.requireConfig": false,
+    "prettier.useEditorConfig": false,
     "editor.tabSize": 2,
     "editor.insertSpaces": true,
     "[javascript]": {
