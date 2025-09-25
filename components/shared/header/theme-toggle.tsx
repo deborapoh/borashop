@@ -1,9 +1,10 @@
-"use client";
+"use client"
 
-import { MoonIcon, SunIcon, SunMoon } from "lucide-react";
-import { useTheme } from "next-themes";
+import { MoonIcon, SunIcon, SunMoon } from "lucide-react"
+import { useTheme } from "next-themes"
+import { useEffect, useState } from "react"
 
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/button"
 import {
   DropdownMenu,
   DropdownMenuCheckboxItem,
@@ -11,10 +12,10 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
+} from "@/components/ui/dropdown-menu"
 
 export function ThemeToggle() {
-  const { theme, setTheme } = useTheme();
+  const { theme, setTheme, resolvedTheme } = useTheme()
 
   return (
     <DropdownMenu>
@@ -25,7 +26,7 @@ export function ThemeToggle() {
         >
           {theme === "system" ? (
             <SunMoon />
-          ) : theme === "dark" ? (
+          ) : resolvedTheme === "dark" ? (
             <MoonIcon />
           ) : (
             <SunIcon />
@@ -55,5 +56,5 @@ export function ThemeToggle() {
         </DropdownMenuCheckboxItem>
       </DropdownMenuContent>
     </DropdownMenu>
-  );
+  )
 }
